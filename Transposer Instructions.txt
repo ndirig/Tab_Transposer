@@ -1,0 +1,19 @@
+
+To use Noah's Tab Transposer:
+
+1. Download the executable file, "Tab_Transposer"
+2. When it is done downloading, double-click to run it.
+3. Enter the TONIC NOTE of the key of the original tab.
+     For example, if the tab is originally in A minor,
+     the tonic note would be 'A'.
+     If you try to enter 'Am' or 'A minor', it won't work.
+4. Enter the tonic note of the key you want to transpose to.
+5. Copy and paste the original tab.
+     On Windows, the copy shortcut is control + c.
+     On Mac, the copy shortcut is command + c.
+     On Windows, the paste shortcut is control + v.
+     On Mac, the paste shortcut is command + v.
+6. Press enter to move to a new line and type 'end'.
+     You must type 'end' exactly, with no surrounding spaces
+     or capital letters.
+7. The transposed tab is outputted.  Copy this and you are ret.

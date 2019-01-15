@@ -20,6 +20,10 @@
  *      (♭, ♯) or superscripts
  *   >  Cannot transpose from a major key to a minor key
  *   >  Doesn't work with 'no5' chords and such
+ *   >  Slash chords that are also 6/9 chord (such as
+ *      D6/9/A) don't work
+ *   >  'Bbmaj7#11/A' transposed from A to F major returns
+ *      'F#maj7#11/AF', with an extra 'F'
  */
 
 #include <iostream>
