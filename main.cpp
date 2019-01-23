@@ -24,6 +24,9 @@
  *      D6/9/A) don't work
  *   >  'Bbmaj7#11/A' transposed from A to F major returns
  *      'F#maj7#11/AF', with an extra 'F'
+ *   >  When a song structure tag such as "Intro:" is placed
+ *      before chords on the same line, those chords are not
+ *      transposed.
  */
 
 #include <iostream>
@@ -33,6 +36,7 @@
 #include <iterator>
 #include <cctype>
 #include <algorithm>
+#include <functional>
 
 using namespace std;
 
@@ -43,7 +47,7 @@ const vector<string> notes = {"ab","a","bb","b","c","db","d",
 // alternate notation for the same notes above
 const vector<string> altNotes = {"g#","a","a#","b","b#","c#","d",
                                  "d#","e","e#","gb","g"};
-const vector<string> chords = {"#5#9","#5b9","11","13","13#11",
+vector<string> chords = {"#5#9","#5b9","11","13","13#11",
                          "13sus", "13sus2","13sus4","2","5","6",
                          "6/9","7", "7#11","7#5","7#9","7b5",
                          "7b5#9", "7b5(#9)","7b9","7sus","7sus2",
@@ -481,6 +485,7 @@ void userIOTab(Key& oldKey, Key& newKey) {
 } // end userIOTab
 
 int main() {
+    std::sort(chords.begin(), chords.end());
     Key oldKey, newKey;
     userIOKeys(oldKey, newKey);
     userIOTab(oldKey, newKey);
